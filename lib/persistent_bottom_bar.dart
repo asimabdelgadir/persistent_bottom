@@ -74,6 +74,7 @@ class _PersistentBottomBarState extends State<PersistentBottomBar> {
               return BottomNavigationBarItem(
                 icon: Icon(item.icon),
                 label: item.title,
+                backgroundColor: Colors.pink,
               );
             },
           ).toList(),

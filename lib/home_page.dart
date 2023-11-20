@@ -4,11 +4,13 @@ import 'package:persistent_bottom/persistent_bottom_bar.dart';
 import 'package:persistent_bottom/taps/tap1.dart';
 import 'package:persistent_bottom/taps/tap2.dart';
 import 'package:persistent_bottom/taps/tap3.dart';
+import 'package:persistent_bottom/taps/tap4.dart';
 
 class HomePage extends StatelessWidget {
   final _tab1navigatorKey = GlobalKey<NavigatorState>();
   final _tab2navigatorKey = GlobalKey<NavigatorState>();
   final _tab3navigatorKey = GlobalKey<NavigatorState>();
+  final _tab4navigatorKey = GlobalKey<NavigatorState>();
 
   HomePage({super.key});
 
@@ -33,6 +35,12 @@ class HomePage extends StatelessWidget {
           icon: Icons.person,
           title: 'Profile',
           navigatorKey: _tab3navigatorKey,
+        ),
+        PersistentTabModel(
+          tab: const TabPage4(),
+          icon: Icons.settings,
+          title: 'Settings',
+          navigatorKey: _tab4navigatorKey,
         ),
       ],
     );
